@@ -5,6 +5,7 @@ import { BaseChartComponent } from '../common/base-chart.component';
 export declare class PieGridComponent extends BaseChartComponent {
     tooltipDisabled: boolean;
     tooltipText: (o: any) => any;
+    arcFracWidth: number;
     dims: ViewDimensions;
     data: any[];
     transform: string;

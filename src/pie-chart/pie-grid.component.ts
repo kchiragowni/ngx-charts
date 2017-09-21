@@ -83,6 +83,7 @@ import { formatLabel } from '../common/label.helper';
 export class PieGridComponent extends BaseChartComponent {
   @Input() tooltipDisabled: boolean = false;
   @Input() tooltipText: (o: any) => any;
+  @Input() arcFracWidth = 0.9;
   
   dims: ViewDimensions;
   data: any[];
@@ -137,7 +138,7 @@ export class PieGridComponent extends BaseChartComponent {
       const label = formatLabel(name);
       const value = d.data.value;
       const radius = (min([d.width - padding, d.height - baselineLabelHeight]) / 2) - 5;
-      const innerRadius = radius * 0.9;
+      const innerRadius = radius * this.arcFracWidth; // radius * 0.9;
 
       let count = 0;
       const colors = () => {
