@@ -61,7 +61,7 @@ import { formatLabel } from '../common/label.helper';
           </svg:text>
           <svg:text
             class="label"
-            dy="1.23em"
+            dy="3.75em"
             x="0"
             [attr.y]="series.outerRadius"
             text-anchor="middle"
